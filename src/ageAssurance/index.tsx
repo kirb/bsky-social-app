@@ -68,13 +68,12 @@ export function useAgeAssurance() {
 }
 
 export function Provider({children}: {children: React.ReactNode}) {
-  return (
-    <AgeAssuranceDataProvider>
-      <InnerProvider>
-        <RedirectOverlayProvider>{children}</RedirectOverlayProvider>
-      </InnerProvider>
-    </AgeAssuranceDataProvider>
-  )
+  ;<AgeAssuranceDataProvider>
+    <InnerProvider>
+      <RedirectOverlayProvider>{children}</RedirectOverlayProvider>
+    </InnerProvider>
+  </AgeAssuranceDataProvider>
+  return <>{children}</>
 }
 
 function InnerProvider({children}: {children: React.ReactNode}) {
